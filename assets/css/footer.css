@@ -1,0 +1,24 @@
+.footer-section{
+    width: 100%;
+    height: auto;
+    background-color: #ffffff;
+    padding: 20px;
+}
+.footer-col-wrapper{
+    width: 100%;
+    height: auto;
+
+}
+.footer-col-wrapper p{
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.footer-col-wrapper p a{
+    text-decoration: none;
+    color: #333;
+}
+
+.footer-col-wrapper p a:hover{
+    color: #297c6b;
+}

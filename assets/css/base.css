@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,600;1,800&display=swap');
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  position: relative;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+}
+:root {
+  --lightThemeColor: #5BC8AF;
+  --ContrastThemeColor: #297c6b;
+  --DarkThemeColor: #194d44;
+  --mainTextColor: #333;
+  --fadedColor: #eaeaea;
+  --whiteColor: #ffffff;
+  --errorColor: #ff7777;
+}
+p{
+  color: #333;
+}
+.theme-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+} 
+.section-heading-wrapper h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.section-heading-wrapper h2 span {
+  -webkit-text-stroke: 1px #333;
+  -webkit-text-fill-color: transparent;
+}
+.theme-btn {
+  width: fit-content;
+  height: fit-content;
+  padding: 8px 65px;
+  border: none;
+  border-radius: 4px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.theme-btn img {
+  height: 15px;
+  margin-top: -3px;
+}
+.theme-primary-btn {
+  background-color: #5BC8AF;
+  color: #ffffff;
+  border: 2px solid #5BC8AF;
+}
+.theme-btn:hover {
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 8px 6px 0 rgba(0, 0, 0, 0.08) !important;
+  transform:translateY(-2px) !important;
+}
+.theme-btn:active {
+  transition: 0.1s ease-in-out;
+  transform:translateY(0) !important;
+  box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.08) !important;
+}
+
+.theme-secondary-btn {
+  background-color: #ffffff;
+  color: #5BC8AF;
+  border: 2px solid #5BC8AF;
+}
+
+
+/* *******Form input********** */
+.input-box.active-grey .input-1 {
+  border: 1px solid #dadce0;
+}
+.input-box.active-grey .input-label {
+  color: #80868b;
+  top: -8px;
+  background: #fff;
+  font-size: 11px;
+  transition: 250ms;
+}
+.input-box.active-grey .input-label svg {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  top: 2px;
+  transition: 250ms;
+}
+
+.input-box {
+  position: relative;
+  margin: 10px 0;
+}
+.input-box .input-label {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 16px;
+  font-weight: 400;
+  max-width: calc(100% - (2 * 8px));
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  left: 8px;
+  top: 13px;
+  padding: 0 8px;
+  transition: 250ms;
+  user-select: none;
+  pointer-events: none;
+}
+.input-box .input-label svg {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  top: 2px;
+  transition: 250ms;
+}
+.input-box .input-1 {
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid #dadce0;
+  padding: 13px 15px;
+  transition: 250ms;
+  background-color: transparent;
+}
+.input-box .input-1:focus {
+  outline: none;
+  border: 2px solid #ffffff;
+  transition: 250ms;
+}
+
+.input-box.error .input-label {
+  color: #ff7777;
+  top: -8px;
+  background: #2b7666;
+  font-size: 11px;
+  transition: 250ms;
+}
+.input-box.error .input-1 {
+  border: 2px solid #ff7777;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+   background-color: #2b7666!important;
+}
+.input-box.focus .input-label,
+.input-box.active .input-label {
+  color: rgba(255, 255, 255, 1);
+  top: -8px;
+  background: #2b7666;
+  font-size: 13px;
+  transition: 250ms;
+}
+.input-box.focus .input-label svg,
+.input-box.active .input-label svg {
+  position: relative;
+  width: 11px;
+  height: 11px;
+  top: 2px;
+  transition: 250ms;
+}
+.input-box.active .input-1 {
+  border: 2px solid #5BC8AF;
+}
+.error-message-area {
+  width: 100%;
+  height: auto;
+  background-color: #ff7777;
+  margin-top: 7px;
+  border-radius: 4px;
+  position: relative;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 12px;
+  display: none;
+  position: absolute;
+  z-index: 10;
+}
+.error-message-area::after {
+  content: "";
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #ff7777;
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  margin-left: -10px;
+}
+.input-box.error .error-message-area {
+  display: block;
+}
+ .fit-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+
+
+select option {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+.card-text{
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.faded-section{
+  background-color: #F5F5F5 ;
+}
+.bg-transparent{
+  background-color: transparent!important;
+}
+.section-padding{
+  padding: 5rem 2rem;
+}
+.rightAlignText{
+  text-align: right;
+}
+.showNavMobCss{
+  
+  height: 169px!important;
+}
+.tooltip-area {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  height: auto;
+  background-color: #297c6b;
+  margin-top: 7px;
+  border-radius: 4px;
+  position: relative;
+  color: #ffffff;
+  padding: 10px;
+  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  margin-left: -140px;
+  z-index: 100;
+  transition: .2s ease-in-out;
+  display: none;
+}
+.tooltip-area::after {
+  content: "";
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid #297c6b;
+  position: absolute;
+  left: 50%;
+  top: -8px;
+  margin-left: -10px;
+}
+.relative{
+  position: relative;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px #297c6b inset;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #fff !important;
+}

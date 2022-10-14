@@ -1,0 +1,72 @@
+@import url('../base.css');
+body {
+  background: #ffffff;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wrapper-1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+.wrapper-2 {
+  padding: 30px;
+  text-align: center;
+}
+h1 {
+  font-family: "Kaushan Script", cursive;
+  font-size: 4em;
+  letter-spacing: 3px;
+  color: #5BC8AF;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.wrapper-2 p {
+  margin: 0;
+  font-size: 1.3em;
+  font-family: "Source Sans Pro", sans-serif;
+  letter-spacing: 1px;
+}
+
+table{
+    width: fit-content;
+    margin:  10px auto;
+}
+table td{
+    padding: 6px;
+    border: 1px solid #dedede;
+    text-transform: capitalize;
+    text-align: left;
+}
+.homeBtn{
+    text-transform: uppercase;
+    margin-top: 10px;
+    transform: unset!important;
+
+}
+
+@media (min-width: 360px) {
+  h1 {
+    font-size: 4.5em;
+  }
+}
+
+@media (min-width: 600px) {
+  .content {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .wrapper-1 {
+    height: initial;
+    max-width: 620px;
+    margin: 0 auto;
+    margin-top: 50px;
+    box-shadow: 4px 8px 40px 8px rgba(43, 118, 102,.1);
+  }
+}

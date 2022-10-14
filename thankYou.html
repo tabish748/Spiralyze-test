@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/pages/thankYou.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Kaushan+Script|Source+Sans+Pro"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="content">
+      <div class="wrapper-1">
+        <div class="wrapper-2">
+          <h1>Thank you !</h1>
+          <p>You Entered the following details.</p>
+          <table >
+            <tr>
+              <td>First Name:</td>
+              <td id="tdFirstName"></td>
+            </tr>
+            <tr>
+              <td>Last Name:</td>
+              <td id="tdLastName"></td>
+            </tr>
+            <tr>
+              <td>Email:</td>
+              <td id="tdEmail"></td>
+            </tr>
+            <tr>
+              <td>Company Name:</td>
+              <td id="tdCompany"></td>
+            </tr>
+            <tr>
+              <td>Country:</td>
+              <td id="tdCountry"></td>
+            </tr>
+          </table>
+     <a href="index.html">
+        <button class="theme-btn theme-secondary-btn homeBtn">go home</button>
+     </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tdFirstName = document.querySelector("#tdFirstName");
+      const tdLastName = document.querySelector("#tdLastName");
+      const tdEmail = document.querySelector("#tdEmail");
+      const tdCompany = document.querySelector("#tdCompany");
+      const tdCountry = document.querySelector("#tdCountry");
+      function setTableFields() {
+        tdFirstName.innerText = localStorage.getItem("firstName");
+        tdLastName.innerText = localStorage.getItem("lastName");
+        tdEmail.innerText = localStorage.getItem("email");
+        tdCompany.innerText = localStorage.getItem("company");
+        tdCountry.innerText = localStorage.getItem("countriesSelect");
+      }
+      setTableFields();
+    </script>
+  </body>
+</html>
